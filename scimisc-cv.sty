@@ -26,19 +26,24 @@
 
 \def\scimisc@cvname{}
 \def\scimisc@cvpersonalinfo{}
+\def\scimisc@cvmytitle{}
 \def\cvinfosep{\hfill|\hfill{}}
 
 \newcommand{\cvname}[1]{\def\scimisc@cvname{#1}}
 \newcommand{\cvpersonalinfo}[1]{\def\scimisc@cvpersonalinfo{#1}}
-
+\newcommand{\cvmytitle}[1]{\def\scimisc@mytitle{#1}}
 \newcommand{\cvtitlefamily}{\rmfamily}
 \newcommand{\cvnamefont}{\cvtitlefamily\huge\bfseries}
+
 \newcommand{\cvpersonalinfofont}{\normalsize}
+\newcommand{\cvbla}{\large}
+
 
 \newcommand{\makecvtitle}{%
   \begin{center}
       {\cvnamefont\MakeTextUppercase{\scimisc@cvname}\par}
-      \vskip4pt\hrule height 0.6pt \relax
+      {\cvbla\scimisc@mytitle\par}
+        \vskip4pt\hrule height 0.6pt \relax
       {\cvpersonalinfofont\scimisc@cvpersonalinfo\par}
   \end{center}\medskip
 }
